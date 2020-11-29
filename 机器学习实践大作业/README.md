@@ -1,15 +1,14 @@
 # machine-learning-practice-projects
-机器学习实践 - 课程项目
+Machine learning Practice
 
-项目用到的数据都由课程助教提供。
-
-有些地方写的不够准确，仅供参考。
+All data are provided by TA of this course.
 
 ## 项目1
-短文本分类，根据文本识别用户的出行消费意图。
+Short text classification: Recognize users' travel consumption intentions based on text.
 
 ## 项目2
-图片分类、图像分割，判断图片中有无人手并将人手部分分隔
+- Image classification
+- image segmentation, judge whether there is no hand in the picture and separate the part of human hand
 
 ## 项目3
-长文本分类，根据病例判断糖尿病人的并发症。
+Long text classification, judging the complications of diabetic patients based on medical records.
