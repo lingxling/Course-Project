@@ -1,2 +1,2 @@
-# sysu-sdcs-course-project
+# course-project
 Course project
