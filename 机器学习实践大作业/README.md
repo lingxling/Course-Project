@@ -7,8 +7,8 @@ All data are provided by TA of this course.
 Short text classification: Recognize users' travel consumption intentions based on text.
 
 ## 项目2
-- Image classification
-- image segmentation, judge whether there is no hand in the picture and separate the part of human hand
+- Image classification, judge whether there is no hand in the image.
+- image segmentation, separate the human hand in the image.
 
 ## 项目3
 Long text classification, judging the complications of diabetic patients based on medical records.
