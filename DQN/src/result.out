@@ -1,0 +1,893 @@
+2020-11-24 09:19:06.844406: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2020-11-24 09:19:06.863317: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2494235000 Hz
+2020-11-24 09:19:06.870470: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55570c152a90 executing computations on platform Host. Devices:
+2020-11-24 09:19:06.870496: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Host, Default Version
+2020-11-24 09:19:06.871495: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2020-11-24 09:19:08.709431: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: Tesla P100-PCIE-12GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:08:00.0
+2020-11-24 09:19:08.709683: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-11-24 09:19:08.711148: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-11-24 09:19:08.712405: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-11-24 09:19:08.712689: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-11-24 09:19:08.714304: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-11-24 09:19:08.715521: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-11-24 09:19:08.719444: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-24 09:19:08.720941: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-11-24 09:19:08.720991: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-11-24 09:19:08.921721: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-11-24 09:19:08.921800: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2020-11-24 09:19:08.921816: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2020-11-24 09:19:08.926171: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11312 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-12GB, pci bus id: 0000:08:00.0, compute capability: 6.0)
+2020-11-24 09:19:08.933532: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55570ccb0c70 executing computations on platform CUDA. Devices:
+2020-11-24 09:19:08.933594: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Tesla P100-PCIE-12GB, Compute Capability 6.0
+Using TensorFlow backend.
+WARNING:tensorflow:From train.py:40: The name tf.keras.backend.set_session is deprecated. Please use tf.compat.v1.keras.backend.set_session instead.
+
+2020-11-24 09:19:09.218178: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: Tesla P100-PCIE-12GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:08:00.0
+2020-11-24 09:19:09.218228: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-11-24 09:19:09.218253: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-11-24 09:19:09.218271: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-11-24 09:19:09.218289: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-11-24 09:19:09.218319: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-11-24 09:19:09.218339: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-11-24 09:19:09.218357: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-24 09:19:09.219824: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-11-24 09:19:09.221011: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: Tesla P100-PCIE-12GB major: 6 minor: 0 memoryClockRate(GHz): 1.3285
+pciBusID: 0000:08:00.0
+2020-11-24 09:19:09.221052: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-11-24 09:19:09.221074: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-11-24 09:19:09.221092: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-11-24 09:19:09.221109: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-11-24 09:19:09.221126: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-11-24 09:19:09.221143: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-11-24 09:19:09.221160: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-24 09:19:09.222608: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-11-24 09:19:09.222641: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-11-24 09:19:09.222650: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2020-11-24 09:19:09.222656: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2020-11-24 09:19:09.224383: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11312 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-12GB, pci bus id: 0000:08:00.0, compute capability: 6.0)
+2020-11-24 09:19:10.078410: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-11-24 09:19:10.253364: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-11-24 09:19:11.184994: W tensorflow/stream_executor/cuda/ptxas_utils.cc:116] *** WARNING *** You are using ptxas 9.0.176, which is older than 9.2.88. ptxas 9.x before 9.2.88 is known to miscompile XLA code, leading to incorrect results or invalid-address errors.
+
+You do not need to update to CUDA 9.2.88; cherry-picking the ptxas binary is sufficient.
+Model: "dqn"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d_1 (Conv2D)            (None, 20, 20, 32)        8224      
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 9, 9, 64)          32832     
+_________________________________________________________________
+conv2d_3 (Conv2D)            (None, 7, 7, 64)          36928     
+_________________________________________________________________
+flatten_1 (Flatten)          (None, 3136)              0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 512)               1606144   
+_________________________________________________________________
+dense_2 (Dense)              (None, 6)                 3078      
+=================================================================
+Total params: 1,687,206
+Trainable params: 1,687,206
+Non-trainable params: 0
+_________________________________________________________________
+Model: "target_dqn"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d_4 (Conv2D)            (None, 20, 20, 32)        8224      
+_________________________________________________________________
+conv2d_5 (Conv2D)            (None, 9, 9, 64)          32832     
+_________________________________________________________________
+conv2d_6 (Conv2D)            (None, 7, 7, 64)          36928     
+_________________________________________________________________
+flatten_2 (Flatten)          (None, 3136)              0         
+_________________________________________________________________
+dense_3 (Dense)              (None, 512)               1606144   
+_________________________________________________________________
+dense_4 (Dense)              (None, 6)                 3078      
+=================================================================
+Total params: 1,687,206
+Trainable params: 1,687,206
+Non-trainable params: 0
+_________________________________________________________________
+frames:  1000, reward: -21.00, epsilon: 0.905789, episode:    1
+frames:  2000, reward: -21.00, epsilon: 0.820543, episode:    2
+frames:  3000, reward: -21.00, epsilon: 0.743410, episode:    3
+frames:  4000, reward: -21.00, epsilon: 0.673617, episode:    5
+frames:  5000, reward: -21.00, epsilon: 0.610465, episode:    6
+frames:  6000, reward: -21.00, epsilon: 0.553324, episode:    7
+frames:  7000, reward: -21.00, epsilon: 0.501619, episode:    9
+frames:  8000, reward: -21.00, epsilon: 0.454836, episode:   10
+frames:  9000, reward: -21.00, epsilon: 0.412504, episode:   11
+frames: 10000, reward: -21.00, epsilon: 0.374201, episode:   13
+frames: 11000, reward: -21.00, epsilon: 0.339542, episode:   14
+frames: 12000, reward: -20.90, epsilon: 0.308182, episode:   15
+frames: 13000, reward: -20.90, epsilon: 0.279806, episode:   16
+frames: 14000, reward: -20.90, epsilon: 0.254131, episode:   17
+frames: 15000, reward: -20.80, epsilon: 0.230899, episode:   18
+frames: 16000, reward: -20.50, epsilon: 0.209878, episode:   19
+frames: 17000, reward: -20.50, epsilon: 0.190857, episode:   20
+frames: 18000, reward: -20.40, epsilon: 0.173646, episode:   21
+frames: 19000, reward: -20.40, epsilon: 0.158073, episode:   22
+frames: 20000, reward: -20.30, epsilon: 0.143982, episode:   23
+frames: 21000, reward: -20.20, epsilon: 0.131232, episode:   24
+frames: 22000, reward: -20.20, epsilon: 0.119695, episode:   25
+frames: 23000, reward: -19.80, epsilon: 0.109256, episode:   27
+frames: 24000, reward: -19.80, epsilon: 0.099811, episode:   28
+frames: 25000, reward: -20.10, epsilon: 0.091264, episode:   29
+frames: 26000, reward: -20.10, epsilon: 0.083531, episode:   30
+frames: 27000, reward: -20.10, epsilon: 0.076533, episode:   31
+frames: 28000, reward: -20.00, epsilon: 0.070202, episode:   32
+frames: 29000, reward: -19.80, epsilon: 0.064473, episode:   33
+frames: 30000, reward: -19.80, epsilon: 0.059289, episode:   33
+frames: 31000, reward: -19.40, epsilon: 0.054599, episode:   34
+frames: 32000, reward: -19.30, epsilon: 0.050355, episode:   35
+frames: 33000, reward: -19.60, epsilon: 0.046514, episode:   36
+frames: 34000, reward: -19.60, epsilon: 0.043040, episode:   36
+frames: 35000, reward: -19.50, epsilon: 0.039895, episode:   37
+frames: 36000, reward: -19.10, epsilon: 0.037050, episode:   38
+frames: 37000, reward: -19.10, epsilon: 0.034476, episode:   38
+frames: 38000, reward: -18.40, epsilon: 0.032147, episode:   39
+frames: 39000, reward: -18.00, epsilon: 0.030039, episode:   40
+frames: 40000, reward: -18.00, epsilon: 0.028132, episode:   40
+frames: 41000, reward: -18.00, epsilon: 0.026407, episode:   41
+frames: 42000, reward: -18.00, epsilon: 0.024846, episode:   41
+frames: 43000, reward: -17.90, epsilon: 0.023433, episode:   42
+frames: 44000, reward: -18.20, epsilon: 0.022155, episode:   43
+frames: 45000, reward: -18.50, epsilon: 0.020998, episode:   44
+frames: 46000, reward: -18.50, epsilon: 0.019951, episode:   44
+frames: 47000, reward: -18.20, epsilon: 0.019004, episode:   45
+frames: 48000, reward: -18.20, epsilon: 0.018147, episode:   45
+frames: 49000, reward: -17.70, epsilon: 0.017372, episode:   46
+frames: 50000, reward: -17.70, epsilon: 0.016671, episode:   46
+frames: 51000, reward: -17.80, epsilon: 0.016036, episode:   47
+frames: 52000, reward: -17.50, epsilon: 0.015461, episode:   48
+frames: 53000, reward: -17.50, epsilon: 0.014942, episode:   48
+frames: 54000, reward: -17.50, epsilon: 0.014471, episode:   49
+frames: 55000, reward: -17.50, epsilon: 0.014046, episode:   49
+frames: 56000, reward: -17.10, epsilon: 0.013661, episode:   50
+frames: 57000, reward: -17.10, epsilon: 0.013313, episode:   50
+frames: 58000, reward: -16.50, epsilon: 0.012997, episode:   51
+frames: 59000, reward: -16.50, epsilon: 0.012712, episode:   51
+frames: 60000, reward: -16.50, epsilon: 0.012454, episode:   51
+frames: 61000, reward: -15.60, epsilon: 0.012220, episode:   52
+frames: 62000, reward: -15.60, epsilon: 0.012009, episode:   52
+frames: 63000, reward: -15.50, epsilon: 0.011818, episode:   53
+frames: 64000, reward: -15.30, epsilon: 0.011645, episode:   54
+frames: 65000, reward: -15.30, epsilon: 0.011488, episode:   54
+frames: 66000, reward: -15.30, epsilon: 0.011347, episode:   54
+frames: 67000, reward: -14.80, epsilon: 0.011219, episode:   55
+frames: 68000, reward: -14.80, epsilon: 0.011103, episode:   55
+frames: 69000, reward: -14.90, epsilon: 0.010998, episode:   56
+frames: 70000, reward: -14.90, epsilon: 0.010903, episode:   56
+frames: 71000, reward: -14.10, epsilon: 0.010817, episode:   57
+frames: 72000, reward: -14.10, epsilon: 0.010739, episode:   57
+frames: 73000, reward: -14.10, epsilon: 0.010669, episode:   57
+frames: 74000, reward: -14.00, epsilon: 0.010605, episode:   58
+frames: 75000, reward: -14.00, epsilon: 0.010548, episode:   58
+frames: 76000, reward: -13.80, epsilon: 0.010495, episode:   59
+frames: 77000, reward: -13.80, epsilon: 0.010448, episode:   59
+frames: 78000, reward: -13.60, epsilon: 0.010406, episode:   60
+frames: 79000, reward: -13.60, epsilon: 0.010367, episode:   60
+frames: 80000, reward: -13.60, epsilon: 0.010332, episode:   60
+frames: 81000, reward: -13.30, epsilon: 0.010301, episode:   61
+frames: 82000, reward: -13.30, epsilon: 0.010272, episode:   61
+frames: 83000, reward: -13.30, epsilon: 0.010246, episode:   61
+frames: 84000, reward: -13.30, epsilon: 0.010223, episode:   61
+frames: 85000, reward: -12.80, epsilon: 0.010201, episode:   62
+frames: 86000, reward: -12.80, epsilon: 0.010182, episode:   62
+frames: 87000, reward: -12.80, epsilon: 0.010165, episode:   62
+frames: 88000, reward: -11.80, epsilon: 0.010149, episode:   63
+frames: 89000, reward: -11.80, epsilon: 0.010135, episode:   63
+frames: 90000, reward: -11.80, epsilon: 0.010122, episode:   63
+frames: 91000, reward: -11.20, epsilon: 0.010111, episode:   64
+frames: 92000, reward: -11.20, epsilon: 0.010100, episode:   64
+frames: 93000, reward: -11.20, epsilon: 0.010091, episode:   64
+frames: 94000, reward: -11.20, epsilon: 0.010082, episode:   65
+frames: 95000, reward: -11.20, epsilon: 0.010074, episode:   65
+frames: 96000, reward: -10.70, epsilon: 0.010067, episode:   66
+frames: 97000, reward: -10.70, epsilon: 0.010061, episode:   66
+frames: 98000, reward: -10.70, epsilon: 0.010055, episode:   66
+frames: 99000, reward: -10.10, epsilon: 0.010050, episode:   67
+frames: 100000, reward: -10.10, epsilon: 0.010045, episode:   67
+frames: 101000, reward: -10.10, epsilon: 0.010041, episode:   67
+frames: 102000, reward: -9.40, epsilon: 0.010037, episode:   68
+frames: 103000, reward: -9.40, epsilon: 0.010033, episode:   68
+frames: 104000, reward: -9.40, epsilon: 0.010030, episode:   68
+frames: 105000, reward: -8.80, epsilon: 0.010027, episode:   69
+frames: 106000, reward: -8.80, epsilon: 0.010025, episode:   69
+frames: 107000, reward: -8.60, epsilon: 0.010022, episode:   70
+frames: 108000, reward: -8.60, epsilon: 0.010020, episode:   70
+frames: 109000, reward: -8.60, epsilon: 0.010018, episode:   70
+frames: 110000, reward: -8.10, epsilon: 0.010017, episode:   71
+frames: 111000, reward: -8.10, epsilon: 0.010015, episode:   71
+frames: 112000, reward: -8.10, epsilon: 0.010014, episode:   71
+frames: 113000, reward: -8.10, epsilon: 0.010012, episode:   71
+frames: 114000, reward: -7.50, epsilon: 0.010011, episode:   72
+frames: 115000, reward: -7.50, epsilon: 0.010010, episode:   72
+frames: 116000, reward: -7.50, epsilon: 0.010009, episode:   72
+frames: 117000, reward: -7.30, epsilon: 0.010008, episode:   73
+frames: 118000, reward: -7.30, epsilon: 0.010007, episode:   73
+frames: 119000, reward: -7.30, epsilon: 0.010007, episode:   73
+frames: 120000, reward: -7.00, epsilon: 0.010006, episode:   74
+frames: 121000, reward: -7.00, epsilon: 0.010006, episode:   74
+frames: 122000, reward: -7.00, epsilon: 0.010005, episode:   74
+frames: 123000, reward: -6.10, epsilon: 0.010005, episode:   75
+frames: 124000, reward: -6.10, epsilon: 0.010004, episode:   75
+frames: 125000, reward: -6.10, epsilon: 0.010004, episode:   75
+frames: 126000, reward: -5.50, epsilon: 0.010003, episode:   76
+frames: 127000, reward: -5.50, epsilon: 0.010003, episode:   76
+frames: 128000, reward: -3.90, epsilon: 0.010003, episode:   77
+frames: 129000, reward: -3.90, epsilon: 0.010002, episode:   77
+frames: 130000, reward: -3.90, epsilon: 0.010002, episode:   77
+frames: 131000, reward: -4.40, epsilon: 0.010002, episode:   78
+frames: 132000, reward: -4.40, epsilon: 0.010002, episode:   78
+frames: 133000, reward: -4.40, epsilon: 0.010002, episode:   78
+frames: 134000, reward: -4.30, epsilon: 0.010001, episode:   79
+frames: 135000, reward: -4.30, epsilon: 0.010001, episode:   79
+frames: 136000, reward: -4.00, epsilon: 0.010001, episode:   80
+frames: 137000, reward: -4.00, epsilon: 0.010001, episode:   80
+frames: 138000, reward: -4.00, epsilon: 0.010001, episode:   80
+frames: 139000, reward: -2.80, epsilon: 0.010001, episode:   81
+frames: 140000, reward: -2.80, epsilon: 0.010001, episode:   81
+frames: 141000, reward: -3.20, epsilon: 0.010001, episode:   82
+frames: 142000, reward: -3.20, epsilon: 0.010001, episode:   82
+frames: 143000, reward: -3.20, epsilon: 0.010001, episode:   82
+frames: 144000, reward: -2.70, epsilon: 0.010001, episode:   83
+frames: 145000, reward: -2.70, epsilon: 0.010000, episode:   83
+frames: 146000, reward: -2.70, epsilon: 0.010000, episode:   83
+frames: 147000, reward: -1.00, epsilon: 0.010000, episode:   84
+frames: 148000, reward: -1.00, epsilon: 0.010000, episode:   84
+frames: 149000, reward: -1.00, epsilon: 0.010000, episode:   84
+frames: 150000, reward: -0.10, epsilon: 0.010000, episode:   85
+frames: 151000, reward: -0.10, epsilon: 0.010000, episode:   85
+frames: 152000, reward: 1.30, epsilon: 0.010000, episode:   86
+frames: 153000, reward: 1.30, epsilon: 0.010000, episode:   86
+frames: 154000, reward: 1.30, epsilon: 0.010000, episode:   86
+frames: 155000, reward: 0.50, epsilon: 0.010000, episode:   87
+frames: 156000, reward: 0.50, epsilon: 0.010000, episode:   87
+frames: 157000, reward: 0.50, epsilon: 0.010000, episode:   87
+frames: 158000, reward: 0.60, epsilon: 0.010000, episode:   88
+frames: 159000, reward: 0.60, epsilon: 0.010000, episode:   88
+frames: 160000, reward: 1.60, epsilon: 0.010000, episode:   89
+frames: 161000, reward: 1.60, epsilon: 0.010000, episode:   89
+frames: 162000, reward: 1.60, epsilon: 0.010000, episode:   89
+frames: 163000, reward: 1.60, epsilon: 0.010000, episode:   89
+frames: 164000, reward: 2.00, epsilon: 0.010000, episode:   90
+frames: 165000, reward: 2.00, epsilon: 0.010000, episode:   90
+frames: 166000, reward: 2.00, epsilon: 0.010000, episode:   90
+frames: 167000, reward: 1.30, epsilon: 0.010000, episode:   91
+frames: 168000, reward: 1.30, epsilon: 0.010000, episode:   91
+frames: 169000, reward: 1.30, epsilon: 0.010000, episode:   91
+frames: 170000, reward: 1.50, epsilon: 0.010000, episode:   92
+frames: 171000, reward: 1.50, epsilon: 0.010000, episode:   92
+frames: 172000, reward: 0.80, epsilon: 0.010000, episode:   93
+frames: 173000, reward: 0.80, epsilon: 0.010000, episode:   93
+frames: 174000, reward: 0.80, epsilon: 0.010000, episode:   93
+frames: 175000, reward: 0.80, epsilon: 0.010000, episode:   93
+frames: 176000, reward: -0.30, epsilon: 0.010000, episode:   94
+frames: 177000, reward: -0.30, epsilon: 0.010000, episode:   94
+frames: 178000, reward: -0.30, epsilon: 0.010000, episode:   94
+frames: 179000, reward: -1.10, epsilon: 0.010000, episode:   95
+frames: 180000, reward: -1.10, epsilon: 0.010000, episode:   95
+frames: 181000, reward: -1.10, epsilon: 0.010000, episode:   95
+frames: 182000, reward: -2.10, epsilon: 0.010000, episode:   96
+frames: 183000, reward: -2.10, epsilon: 0.010000, episode:   96
+frames: 184000, reward: -0.70, epsilon: 0.010000, episode:   97
+frames: 185000, reward: -0.70, epsilon: 0.010000, episode:   97
+frames: 186000, reward: -0.70, epsilon: 0.010000, episode:   97
+frames: 187000, reward: 0.70, epsilon: 0.010000, episode:   98
+frames: 188000, reward: 0.70, epsilon: 0.010000, episode:   98
+frames: 189000, reward: 0.70, epsilon: 0.010000, episode:   98
+frames: 190000, reward: 0.10, epsilon: 0.010000, episode:   99
+frames: 191000, reward: 0.10, epsilon: 0.010000, episode:   99
+frames: 192000, reward: 1.80, epsilon: 0.010000, episode:  100
+frames: 193000, reward: 1.80, epsilon: 0.010000, episode:  100
+frames: 194000, reward: 2.40, epsilon: 0.010000, episode:  101
+frames: 195000, reward: 2.40, epsilon: 0.010000, episode:  101
+frames: 196000, reward: 2.40, epsilon: 0.010000, episode:  101
+frames: 197000, reward: 2.40, epsilon: 0.010000, episode:  102
+frames: 198000, reward: 2.40, epsilon: 0.010000, episode:  102
+frames: 199000, reward: 2.40, epsilon: 0.010000, episode:  102
+frames: 200000, reward: 3.70, epsilon: 0.010000, episode:  103
+frames: 201000, reward: 3.70, epsilon: 0.010000, episode:  103
+frames: 202000, reward: 3.70, epsilon: 0.010000, episode:  103
+frames: 203000, reward: 5.20, epsilon: 0.010000, episode:  104
+frames: 204000, reward: 5.20, epsilon: 0.010000, episode:  104
+frames: 205000, reward: 6.20, epsilon: 0.010000, episode:  105
+frames: 206000, reward: 6.20, epsilon: 0.010000, episode:  105
+frames: 207000, reward: 7.30, epsilon: 0.010000, episode:  106
+frames: 208000, reward: 7.30, epsilon: 0.010000, episode:  106
+frames: 209000, reward: 7.30, epsilon: 0.010000, episode:  106
+frames: 210000, reward: 6.80, epsilon: 0.010000, episode:  107
+frames: 211000, reward: 6.80, epsilon: 0.010000, episode:  107
+frames: 212000, reward: 7.60, epsilon: 0.010000, episode:  108
+frames: 213000, reward: 7.60, epsilon: 0.010000, episode:  108
+frames: 214000, reward: 9.10, epsilon: 0.010000, episode:  109
+frames: 215000, reward: 9.10, epsilon: 0.010000, episode:  109
+frames: 216000, reward: 9.10, epsilon: 0.010000, episode:  109
+frames: 217000, reward: 8.90, epsilon: 0.010000, episode:  110
+frames: 218000, reward: 8.90, epsilon: 0.010000, episode:  110
+frames: 219000, reward: 9.50, epsilon: 0.010000, episode:  111
+frames: 220000, reward: 9.50, epsilon: 0.010000, episode:  111
+frames: 221000, reward: 11.50, epsilon: 0.010000, episode:  112
+frames: 222000, reward: 11.50, epsilon: 0.010000, episode:  112
+frames: 223000, reward: 12.10, epsilon: 0.010000, episode:  113
+frames: 224000, reward: 12.10, epsilon: 0.010000, episode:  113
+frames: 225000, reward: 12.10, epsilon: 0.010000, episode:  114
+frames: 226000, reward: 12.10, epsilon: 0.010000, episode:  114
+frames: 227000, reward: 12.90, epsilon: 0.010000, episode:  115
+frames: 228000, reward: 12.90, epsilon: 0.010000, episode:  115
+frames: 229000, reward: 13.80, epsilon: 0.010000, episode:  116
+frames: 230000, reward: 13.80, epsilon: 0.010000, episode:  116
+frames: 231000, reward: 13.80, epsilon: 0.010000, episode:  116
+frames: 232000, reward: 14.20, epsilon: 0.010000, episode:  117
+frames: 233000, reward: 14.90, epsilon: 0.010000, episode:  118
+frames: 234000, reward: 14.90, epsilon: 0.010000, episode:  118
+frames: 235000, reward: 15.30, epsilon: 0.010000, episode:  119
+frames: 236000, reward: 15.30, epsilon: 0.010000, episode:  119
+frames: 237000, reward: 16.00, epsilon: 0.010000, episode:  120
+frames: 238000, reward: 16.00, epsilon: 0.010000, episode:  120
+frames: 239000, reward: 16.80, epsilon: 0.010000, episode:  121
+frames: 240000, reward: 16.80, epsilon: 0.010000, episode:  122
+frames: 241000, reward: 16.80, epsilon: 0.010000, episode:  122
+frames: 242000, reward: 17.60, epsilon: 0.010000, episode:  123
+frames: 243000, reward: 17.60, epsilon: 0.010000, episode:  123
+frames: 244000, reward: 17.90, epsilon: 0.010000, episode:  124
+frames: 245000, reward: 17.90, epsilon: 0.010000, episode:  124
+frames: 246000, reward: 18.10, epsilon: 0.010000, episode:  125
+frames: 247000, reward: 18.10, epsilon: 0.010000, episode:  125
+frames: 248000, reward: 18.20, epsilon: 0.010000, episode:  126
+frames: 249000, reward: 18.20, epsilon: 0.010000, episode:  126
+frames: 250000, reward: 18.40, epsilon: 0.010000, episode:  127
+frames: 251000, reward: 18.40, epsilon: 0.010000, episode:  128
+frames: 252000, reward: 18.40, epsilon: 0.010000, episode:  128
+frames: 253000, reward: 18.50, epsilon: 0.010000, episode:  129
+frames: 254000, reward: 18.50, epsilon: 0.010000, episode:  129
+frames: 255000, reward: 17.70, epsilon: 0.010000, episode:  130
+frames: 256000, reward: 17.70, epsilon: 0.010000, episode:  130
+frames: 257000, reward: 17.80, epsilon: 0.010000, episode:  131
+frames: 258000, reward: 17.80, epsilon: 0.010000, episode:  131
+frames: 259000, reward: 16.70, epsilon: 0.010000, episode:  132
+frames: 260000, reward: 16.70, epsilon: 0.010000, episode:  132
+frames: 261000, reward: 16.70, epsilon: 0.010000, episode:  133
+frames: 262000, reward: 16.70, epsilon: 0.010000, episode:  133
+frames: 263000, reward: 16.70, epsilon: 0.010000, episode:  134
+frames: 264000, reward: 16.70, epsilon: 0.010000, episode:  134
+frames: 265000, reward: 16.80, epsilon: 0.010000, episode:  135
+frames: 266000, reward: 16.80, epsilon: 0.010000, episode:  135
+frames: 267000, reward: 16.10, epsilon: 0.010000, episode:  136
+frames: 268000, reward: 16.10, epsilon: 0.010000, episode:  136
+frames: 269000, reward: 15.90, epsilon: 0.010000, episode:  137
+frames: 270000, reward: 15.90, epsilon: 0.010000, episode:  137
+frames: 271000, reward: 15.60, epsilon: 0.010000, episode:  138
+frames: 272000, reward: 15.60, epsilon: 0.010000, episode:  138
+frames: 273000, reward: 15.70, epsilon: 0.010000, episode:  139
+frames: 274000, reward: 16.50, epsilon: 0.010000, episode:  140
+frames: 275000, reward: 16.50, epsilon: 0.010000, episode:  140
+frames: 276000, reward: 16.40, epsilon: 0.010000, episode:  141
+frames: 277000, reward: 16.40, epsilon: 0.010000, episode:  141
+frames: 278000, reward: 17.40, epsilon: 0.010000, episode:  142
+frames: 279000, reward: 17.70, epsilon: 0.010000, episode:  143
+frames: 280000, reward: 17.70, epsilon: 0.010000, episode:  143
+frames: 281000, reward: 18.10, epsilon: 0.010000, episode:  144
+frames: 282000, reward: 18.10, epsilon: 0.010000, episode:  144
+frames: 283000, reward: 18.10, epsilon: 0.010000, episode:  145
+frames: 284000, reward: 18.90, epsilon: 0.010000, episode:  146
+frames: 285000, reward: 18.90, epsilon: 0.010000, episode:  146
+frames: 286000, reward: 19.20, epsilon: 0.010000, episode:  147
+frames: 287000, reward: 19.20, epsilon: 0.010000, episode:  147
+frames: 288000, reward: 19.30, epsilon: 0.010000, episode:  148
+frames: 289000, reward: 19.30, epsilon: 0.010000, episode:  148
+frames: 290000, reward: 18.50, epsilon: 0.010000, episode:  149
+frames: 291000, reward: 18.50, epsilon: 0.010000, episode:  149
+frames: 292000, reward: 18.00, epsilon: 0.010000, episode:  150
+frames: 293000, reward: 18.00, epsilon: 0.010000, episode:  150
+frames: 294000, reward: 17.40, epsilon: 0.010000, episode:  151
+frames: 295000, reward: 17.40, epsilon: 0.010000, episode:  151
+frames: 296000, reward: 17.30, epsilon: 0.010000, episode:  152
+frames: 297000, reward: 17.30, epsilon: 0.010000, episode:  152
+frames: 298000, reward: 17.30, epsilon: 0.010000, episode:  153
+frames: 299000, reward: 17.30, epsilon: 0.010000, episode:  153
+frames: 300000, reward: 17.30, epsilon: 0.010000, episode:  154
+frames: 301000, reward: 17.30, epsilon: 0.010000, episode:  155
+frames: 302000, reward: 17.30, epsilon: 0.010000, episode:  155
+frames: 303000, reward: 17.30, epsilon: 0.010000, episode:  156
+frames: 304000, reward: 17.30, epsilon: 0.010000, episode:  156
+frames: 305000, reward: 17.20, epsilon: 0.010000, episode:  157
+frames: 306000, reward: 17.20, epsilon: 0.010000, episode:  157
+frames: 307000, reward: 17.30, epsilon: 0.010000, episode:  158
+frames: 308000, reward: 17.30, epsilon: 0.010000, episode:  158
+frames: 309000, reward: 18.10, epsilon: 0.010000, episode:  159
+frames: 310000, reward: 18.60, epsilon: 0.010000, episode:  160
+frames: 311000, reward: 18.60, epsilon: 0.010000, episode:  160
+frames: 312000, reward: 19.30, epsilon: 0.010000, episode:  161
+frames: 313000, reward: 19.30, epsilon: 0.010000, episode:  161
+frames: 314000, reward: 19.50, epsilon: 0.010000, episode:  162
+frames: 315000, reward: 19.50, epsilon: 0.010000, episode:  162
+frames: 316000, reward: 19.30, epsilon: 0.010000, episode:  163
+frames: 317000, reward: 19.30, epsilon: 0.010000, episode:  164
+frames: 318000, reward: 19.30, epsilon: 0.010000, episode:  164
+frames: 319000, reward: 19.30, epsilon: 0.010000, episode:  165
+frames: 320000, reward: 19.30, epsilon: 0.010000, episode:  165
+frames: 321000, reward: 19.20, epsilon: 0.010000, episode:  166
+frames: 322000, reward: 19.50, epsilon: 0.010000, episode:  167
+frames: 323000, reward: 19.50, epsilon: 0.010000, episode:  167
+frames: 324000, reward: 19.30, epsilon: 0.010000, episode:  168
+frames: 325000, reward: 19.30, epsilon: 0.010000, episode:  168
+frames: 326000, reward: 19.30, epsilon: 0.010000, episode:  169
+frames: 327000, reward: 19.30, epsilon: 0.010000, episode:  170
+frames: 328000, reward: 19.30, epsilon: 0.010000, episode:  170
+frames: 329000, reward: 19.30, epsilon: 0.010000, episode:  170
+frames: 330000, reward: 17.80, epsilon: 0.010000, episode:  171
+frames: 331000, reward: 17.90, epsilon: 0.010000, episode:  172
+frames: 332000, reward: 17.90, epsilon: 0.010000, episode:  172
+frames: 333000, reward: 17.90, epsilon: 0.010000, episode:  172
+frames: 334000, reward: 16.60, epsilon: 0.010000, episode:  173
+frames: 335000, reward: 16.40, epsilon: 0.010000, episode:  174
+frames: 336000, reward: 16.40, epsilon: 0.010000, episode:  174
+frames: 337000, reward: 16.40, epsilon: 0.010000, episode:  174
+frames: 338000, reward: 15.90, epsilon: 0.010000, episode:  175
+frames: 339000, reward: 15.90, epsilon: 0.010000, episode:  175
+frames: 340000, reward: 15.60, epsilon: 0.010000, episode:  176
+frames: 341000, reward: 15.60, epsilon: 0.010000, episode:  176
+frames: 342000, reward: 15.20, epsilon: 0.010000, episode:  177
+frames: 343000, reward: 15.20, epsilon: 0.010000, episode:  177
+frames: 344000, reward: 15.10, epsilon: 0.010000, episode:  178
+frames: 345000, reward: 15.10, epsilon: 0.010000, episode:  179
+frames: 346000, reward: 15.10, epsilon: 0.010000, episode:  179
+frames: 347000, reward: 15.00, epsilon: 0.010000, episode:  180
+frames: 348000, reward: 15.00, epsilon: 0.010000, episode:  180
+frames: 349000, reward: 16.40, epsilon: 0.010000, episode:  181
+frames: 350000, reward: 16.40, epsilon: 0.010000, episode:  181
+frames: 351000, reward: 15.90, epsilon: 0.010000, episode:  182
+frames: 352000, reward: 15.90, epsilon: 0.010000, episode:  182
+frames: 353000, reward: 17.30, epsilon: 0.010000, episode:  183
+frames: 354000, reward: 17.30, epsilon: 0.010000, episode:  183
+frames: 355000, reward: 17.40, epsilon: 0.010000, episode:  184
+frames: 356000, reward: 17.90, epsilon: 0.010000, episode:  185
+frames: 357000, reward: 17.90, epsilon: 0.010000, episode:  185
+frames: 358000, reward: 17.80, epsilon: 0.010000, episode:  186
+frames: 359000, reward: 17.80, epsilon: 0.010000, episode:  186
+frames: 360000, reward: 17.80, epsilon: 0.010000, episode:  187
+frames: 361000, reward: 17.80, epsilon: 0.010000, episode:  187
+frames: 362000, reward: 17.80, epsilon: 0.010000, episode:  188
+frames: 363000, reward: 17.80, epsilon: 0.010000, episode:  188
+frames: 364000, reward: 17.50, epsilon: 0.010000, episode:  189
+frames: 365000, reward: 17.50, epsilon: 0.010000, episode:  189
+frames: 366000, reward: 17.50, epsilon: 0.010000, episode:  190
+frames: 367000, reward: 17.60, epsilon: 0.010000, episode:  191
+frames: 368000, reward: 17.60, epsilon: 0.010000, episode:  191
+frames: 369000, reward: 17.90, epsilon: 0.010000, episode:  192
+frames: 370000, reward: 17.90, epsilon: 0.010000, episode:  192
+frames: 371000, reward: 17.60, epsilon: 0.010000, episode:  193
+frames: 372000, reward: 17.60, epsilon: 0.010000, episode:  193
+frames: 373000, reward: 17.70, epsilon: 0.010000, episode:  194
+frames: 374000, reward: 17.70, epsilon: 0.010000, episode:  194
+frames: 375000, reward: 17.30, epsilon: 0.010000, episode:  195
+frames: 376000, reward: 17.30, epsilon: 0.010000, episode:  195
+frames: 377000, reward: 16.80, epsilon: 0.010000, episode:  196
+frames: 378000, reward: 16.80, epsilon: 0.010000, episode:  196
+frames: 379000, reward: 16.90, epsilon: 0.010000, episode:  197
+frames: 380000, reward: 16.90, epsilon: 0.010000, episode:  197
+frames: 381000, reward: 17.00, epsilon: 0.010000, episode:  198
+frames: 382000, reward: 17.00, epsilon: 0.010000, episode:  198
+frames: 383000, reward: 17.30, epsilon: 0.010000, episode:  199
+frames: 384000, reward: 17.50, epsilon: 0.010000, episode:  200
+frames: 385000, reward: 17.50, epsilon: 0.010000, episode:  200
+frames: 386000, reward: 17.30, epsilon: 0.010000, episode:  201
+frames: 387000, reward: 17.30, epsilon: 0.010000, episode:  201
+frames: 388000, reward: 17.00, epsilon: 0.010000, episode:  202
+frames: 389000, reward: 17.00, epsilon: 0.010000, episode:  202
+frames: 390000, reward: 17.30, epsilon: 0.010000, episode:  203
+frames: 391000, reward: 17.30, epsilon: 0.010000, episode:  203
+frames: 392000, reward: 17.30, epsilon: 0.010000, episode:  204
+frames: 393000, reward: 17.60, epsilon: 0.010000, episode:  205
+frames: 394000, reward: 17.60, epsilon: 0.010000, episode:  205
+frames: 395000, reward: 18.50, epsilon: 0.010000, episode:  206
+frames: 396000, reward: 18.50, epsilon: 0.010000, episode:  206
+frames: 397000, reward: 18.40, epsilon: 0.010000, episode:  207
+frames: 398000, reward: 18.40, epsilon: 0.010000, episode:  207
+frames: 399000, reward: 18.60, epsilon: 0.010000, episode:  208
+frames: 400000, reward: 18.60, epsilon: 0.010000, episode:  208
+frames: 401000, reward: 18.20, epsilon: 0.010000, episode:  209
+frames: 402000, reward: 18.10, epsilon: 0.010000, episode:  210
+frames: 403000, reward: 18.10, epsilon: 0.010000, episode:  210
+frames: 404000, reward: 17.90, epsilon: 0.010000, episode:  211
+frames: 405000, reward: 17.90, epsilon: 0.010000, episode:  211
+frames: 406000, reward: 18.10, epsilon: 0.010000, episode:  212
+frames: 407000, reward: 18.10, epsilon: 0.010000, episode:  212
+frames: 408000, reward: 18.00, epsilon: 0.010000, episode:  213
+frames: 409000, reward: 18.00, epsilon: 0.010000, episode:  213
+frames: 410000, reward: 17.70, epsilon: 0.010000, episode:  214
+frames: 411000, reward: 17.70, epsilon: 0.010000, episode:  214
+frames: 412000, reward: 17.80, epsilon: 0.010000, episode:  215
+frames: 413000, reward: 17.80, epsilon: 0.010000, episode:  216
+frames: 414000, reward: 17.80, epsilon: 0.010000, episode:  216
+frames: 415000, reward: 17.90, epsilon: 0.010000, episode:  217
+frames: 416000, reward: 17.90, epsilon: 0.010000, episode:  217
+frames: 417000, reward: 17.80, epsilon: 0.010000, episode:  218
+frames: 418000, reward: 17.80, epsilon: 0.010000, episode:  218
+frames: 419000, reward: 17.90, epsilon: 0.010000, episode:  219
+frames: 420000, reward: 17.90, epsilon: 0.010000, episode:  219
+frames: 421000, reward: 17.40, epsilon: 0.010000, episode:  220
+frames: 422000, reward: 17.40, epsilon: 0.010000, episode:  220
+frames: 423000, reward: 17.60, epsilon: 0.010000, episode:  221
+frames: 424000, reward: 17.90, epsilon: 0.010000, episode:  222
+frames: 425000, reward: 17.90, epsilon: 0.010000, episode:  222
+frames: 426000, reward: 18.10, epsilon: 0.010000, episode:  223
+frames: 427000, reward: 18.10, epsilon: 0.010000, episode:  223
+frames: 428000, reward: 17.70, epsilon: 0.010000, episode:  224
+frames: 429000, reward: 17.70, epsilon: 0.010000, episode:  224
+frames: 430000, reward: 17.50, epsilon: 0.010000, episode:  225
+frames: 431000, reward: 17.50, epsilon: 0.010000, episode:  225
+frames: 432000, reward: 17.30, epsilon: 0.010000, episode:  226
+frames: 433000, reward: 17.30, epsilon: 0.010000, episode:  226
+frames: 434000, reward: 16.80, epsilon: 0.010000, episode:  227
+frames: 435000, reward: 16.80, epsilon: 0.010000, episode:  227
+frames: 436000, reward: 16.90, epsilon: 0.010000, episode:  228
+frames: 437000, reward: 16.90, epsilon: 0.010000, episode:  228
+frames: 438000, reward: 16.40, epsilon: 0.010000, episode:  229
+frames: 439000, reward: 16.90, epsilon: 0.010000, episode:  230
+frames: 440000, reward: 16.90, epsilon: 0.010000, episode:  230
+frames: 441000, reward: 16.70, epsilon: 0.010000, episode:  231
+frames: 442000, reward: 16.70, epsilon: 0.010000, episode:  231
+frames: 443000, reward: 16.70, epsilon: 0.010000, episode:  232
+frames: 444000, reward: 16.70, epsilon: 0.010000, episode:  232
+frames: 445000, reward: 16.70, epsilon: 0.010000, episode:  233
+frames: 446000, reward: 17.40, epsilon: 0.010000, episode:  234
+frames: 447000, reward: 17.40, epsilon: 0.010000, episode:  234
+frames: 448000, reward: 17.40, epsilon: 0.010000, episode:  234
+frames: 449000, reward: 16.70, epsilon: 0.010000, episode:  235
+frames: 450000, reward: 16.70, epsilon: 0.010000, episode:  236
+frames: 451000, reward: 16.70, epsilon: 0.010000, episode:  236
+frames: 452000, reward: 17.50, epsilon: 0.010000, episode:  237
+frames: 453000, reward: 17.50, epsilon: 0.010000, episode:  237
+frames: 454000, reward: 17.30, epsilon: 0.010000, episode:  238
+frames: 455000, reward: 17.30, epsilon: 0.010000, episode:  238
+frames: 456000, reward: 17.80, epsilon: 0.010000, episode:  239
+frames: 457000, reward: 17.80, epsilon: 0.010000, episode:  239
+frames: 458000, reward: 17.60, epsilon: 0.010000, episode:  240
+frames: 459000, reward: 17.70, epsilon: 0.010000, episode:  241
+frames: 460000, reward: 17.70, epsilon: 0.010000, episode:  241
+frames: 461000, reward: 17.60, epsilon: 0.010000, episode:  242
+frames: 462000, reward: 17.60, epsilon: 0.010000, episode:  242
+frames: 463000, reward: 17.30, epsilon: 0.010000, episode:  243
+frames: 464000, reward: 17.30, epsilon: 0.010000, episode:  243
+frames: 465000, reward: 17.30, epsilon: 0.010000, episode:  244
+frames: 466000, reward: 17.30, epsilon: 0.010000, episode:  244
+frames: 467000, reward: 17.70, epsilon: 0.010000, episode:  245
+frames: 468000, reward: 17.70, epsilon: 0.010000, episode:  245
+frames: 469000, reward: 18.00, epsilon: 0.010000, episode:  246
+frames: 470000, reward: 18.00, epsilon: 0.010000, episode:  246
+frames: 471000, reward: 17.70, epsilon: 0.010000, episode:  247
+frames: 472000, reward: 17.50, epsilon: 0.010000, episode:  248
+frames: 473000, reward: 17.50, epsilon: 0.010000, episode:  248
+frames: 474000, reward: 17.50, epsilon: 0.010000, episode:  248
+frames: 475000, reward: 17.10, epsilon: 0.010000, episode:  249
+frames: 476000, reward: 17.30, epsilon: 0.010000, episode:  250
+frames: 477000, reward: 17.30, epsilon: 0.010000, episode:  250
+frames: 478000, reward: 17.50, epsilon: 0.010000, episode:  251
+frames: 479000, reward: 17.50, epsilon: 0.010000, episode:  251
+frames: 480000, reward: 16.80, epsilon: 0.010000, episode:  252
+frames: 481000, reward: 16.80, epsilon: 0.010000, episode:  252
+frames: 482000, reward: 16.70, epsilon: 0.010000, episode:  253
+frames: 483000, reward: 16.70, epsilon: 0.010000, episode:  253
+frames: 484000, reward: 16.70, epsilon: 0.010000, episode:  254
+frames: 485000, reward: 16.70, epsilon: 0.010000, episode:  254
+frames: 486000, reward: 17.20, epsilon: 0.010000, episode:  255
+frames: 487000, reward: 17.20, epsilon: 0.010000, episode:  255
+frames: 488000, reward: 16.30, epsilon: 0.010000, episode:  256
+frames: 489000, reward: 16.30, epsilon: 0.010000, episode:  256
+frames: 490000, reward: 15.70, epsilon: 0.010000, episode:  257
+frames: 491000, reward: 15.70, epsilon: 0.010000, episode:  257
+frames: 492000, reward: 15.90, epsilon: 0.010000, episode:  258
+frames: 493000, reward: 16.60, epsilon: 0.010000, episode:  259
+frames: 494000, reward: 16.60, epsilon: 0.010000, episode:  259
+frames: 495000, reward: 16.60, epsilon: 0.010000, episode:  260
+frames: 496000, reward: 16.60, epsilon: 0.010000, episode:  260
+frames: 497000, reward: 15.60, epsilon: 0.010000, episode:  261
+frames: 498000, reward: 15.60, epsilon: 0.010000, episode:  261
+frames: 499000, reward: 16.40, epsilon: 0.010000, episode:  262
+frames: 500000, reward: 16.40, epsilon: 0.010000, episode:  262
+frames: 501000, reward: 16.90, epsilon: 0.010000, episode:  263
+frames: 502000, reward: 16.90, epsilon: 0.010000, episode:  263
+frames: 503000, reward: 15.80, epsilon: 0.010000, episode:  264
+frames: 504000, reward: 15.80, epsilon: 0.010000, episode:  264
+frames: 505000, reward: 15.60, epsilon: 0.010000, episode:  265
+frames: 506000, reward: 15.60, epsilon: 0.010000, episode:  265
+frames: 507000, reward: 16.50, epsilon: 0.010000, episode:  266
+frames: 508000, reward: 17.30, epsilon: 0.010000, episode:  267
+frames: 509000, reward: 17.30, epsilon: 0.010000, episode:  267
+frames: 510000, reward: 17.50, epsilon: 0.010000, episode:  268
+frames: 511000, reward: 17.50, epsilon: 0.010000, episode:  268
+frames: 512000, reward: 17.20, epsilon: 0.010000, episode:  269
+frames: 513000, reward: 17.20, epsilon: 0.010000, episode:  269
+frames: 514000, reward: 15.10, epsilon: 0.010000, episode:  270
+frames: 515000, reward: 15.10, epsilon: 0.010000, episode:  270
+frames: 516000, reward: 15.90, epsilon: 0.010000, episode:  271
+frames: 517000, reward: 15.90, epsilon: 0.010000, episode:  271
+frames: 518000, reward: 16.00, epsilon: 0.010000, episode:  272
+frames: 519000, reward: 16.00, epsilon: 0.010000, episode:  272
+frames: 520000, reward: 15.50, epsilon: 0.010000, episode:  273
+frames: 521000, reward: 16.70, epsilon: 0.010000, episode:  274
+frames: 522000, reward: 16.70, epsilon: 0.010000, episode:  274
+frames: 523000, reward: 17.00, epsilon: 0.010000, episode:  275
+frames: 524000, reward: 17.00, epsilon: 0.010000, episode:  275
+frames: 525000, reward: 16.60, epsilon: 0.010000, episode:  276
+frames: 526000, reward: 16.60, epsilon: 0.010000, episode:  276
+frames: 527000, reward: 16.00, epsilon: 0.010000, episode:  277
+frames: 528000, reward: 16.00, epsilon: 0.010000, episode:  277
+frames: 529000, reward: 16.00, epsilon: 0.010000, episode:  277
+frames: 530000, reward: 14.00, epsilon: 0.010000, episode:  278
+frames: 531000, reward: 14.00, epsilon: 0.010000, episode:  278
+frames: 532000, reward: 12.20, epsilon: 0.010000, episode:  279
+frames: 533000, reward: 12.20, epsilon: 0.010000, episode:  279
+frames: 534000, reward: 13.50, epsilon: 0.010000, episode:  280
+frames: 535000, reward: 13.50, epsilon: 0.010000, episode:  280
+frames: 536000, reward: 13.50, epsilon: 0.010000, episode:  280
+frames: 537000, reward: 12.60, epsilon: 0.010000, episode:  281
+frames: 538000, reward: 12.60, epsilon: 0.010000, episode:  281
+frames: 539000, reward: 12.40, epsilon: 0.010000, episode:  282
+frames: 540000, reward: 12.30, epsilon: 0.010000, episode:  283
+frames: 541000, reward: 12.30, epsilon: 0.010000, episode:  283
+frames: 542000, reward: 12.00, epsilon: 0.010000, episode:  284
+frames: 543000, reward: 12.00, epsilon: 0.010000, episode:  284
+frames: 544000, reward: 11.90, epsilon: 0.010000, episode:  285
+frames: 545000, reward: 11.90, epsilon: 0.010000, episode:  285
+frames: 546000, reward: 12.20, epsilon: 0.010000, episode:  286
+frames: 547000, reward: 12.20, epsilon: 0.010000, episode:  286
+frames: 548000, reward: 12.60, epsilon: 0.010000, episode:  287
+frames: 549000, reward: 14.70, epsilon: 0.010000, episode:  288
+frames: 550000, reward: 14.70, epsilon: 0.010000, episode:  288
+frames: 551000, reward: 16.40, epsilon: 0.010000, episode:  289
+frames: 552000, reward: 16.40, epsilon: 0.010000, episode:  289
+frames: 553000, reward: 16.50, epsilon: 0.010000, episode:  290
+frames: 554000, reward: 16.50, epsilon: 0.010000, episode:  290
+frames: 555000, reward: 17.40, epsilon: 0.010000, episode:  291
+frames: 556000, reward: 17.40, epsilon: 0.010000, episode:  291
+frames: 557000, reward: 17.00, epsilon: 0.010000, episode:  292
+frames: 558000, reward: 17.00, epsilon: 0.010000, episode:  292
+frames: 559000, reward: 17.20, epsilon: 0.010000, episode:  293
+frames: 560000, reward: 17.20, epsilon: 0.010000, episode:  293
+frames: 561000, reward: 16.60, epsilon: 0.010000, episode:  294
+frames: 562000, reward: 16.60, epsilon: 0.010000, episode:  294
+frames: 563000, reward: 16.30, epsilon: 0.010000, episode:  295
+frames: 564000, reward: 16.30, epsilon: 0.010000, episode:  295
+frames: 565000, reward: 16.10, epsilon: 0.010000, episode:  296
+frames: 566000, reward: 16.10, epsilon: 0.010000, episode:  296
+frames: 567000, reward: 16.50, epsilon: 0.010000, episode:  297
+frames: 568000, reward: 16.50, epsilon: 0.010000, episode:  297
+frames: 569000, reward: 16.10, epsilon: 0.010000, episode:  298
+frames: 570000, reward: 16.10, epsilon: 0.010000, episode:  298
+frames: 571000, reward: 16.30, epsilon: 0.010000, episode:  299
+frames: 572000, reward: 16.90, epsilon: 0.010000, episode:  300
+frames: 573000, reward: 16.90, epsilon: 0.010000, episode:  300
+frames: 574000, reward: 17.10, epsilon: 0.010000, episode:  301
+frames: 575000, reward: 17.10, epsilon: 0.010000, episode:  301
+frames: 576000, reward: 17.50, epsilon: 0.010000, episode:  302
+frames: 577000, reward: 17.50, epsilon: 0.010000, episode:  302
+frames: 578000, reward: 17.80, epsilon: 0.010000, episode:  303
+frames: 579000, reward: 18.60, epsilon: 0.010000, episode:  304
+frames: 580000, reward: 18.60, epsilon: 0.010000, episode:  304
+frames: 581000, reward: 18.70, epsilon: 0.010000, episode:  305
+frames: 582000, reward: 18.70, epsilon: 0.010000, episode:  305
+frames: 583000, reward: 18.90, epsilon: 0.010000, episode:  306
+frames: 584000, reward: 18.90, epsilon: 0.010000, episode:  306
+frames: 585000, reward: 18.80, epsilon: 0.010000, episode:  307
+frames: 586000, reward: 19.20, epsilon: 0.010000, episode:  308
+frames: 587000, reward: 19.20, epsilon: 0.010000, episode:  308
+frames: 588000, reward: 19.20, epsilon: 0.010000, episode:  309
+frames: 589000, reward: 19.20, epsilon: 0.010000, episode:  309
+frames: 590000, reward: 18.40, epsilon: 0.010000, episode:  310
+frames: 591000, reward: 18.40, epsilon: 0.010000, episode:  310
+frames: 592000, reward: 18.40, epsilon: 0.010000, episode:  311
+frames: 593000, reward: 18.40, epsilon: 0.010000, episode:  311
+frames: 594000, reward: 18.40, epsilon: 0.010000, episode:  312
+frames: 595000, reward: 18.40, epsilon: 0.010000, episode:  312
+frames: 596000, reward: 18.30, epsilon: 0.010000, episode:  313
+frames: 597000, reward: 18.30, epsilon: 0.010000, episode:  314
+frames: 598000, reward: 18.30, epsilon: 0.010000, episode:  314
+frames: 599000, reward: 18.00, epsilon: 0.010000, episode:  315
+frames: 600000, reward: 18.00, epsilon: 0.010000, episode:  315
+frames: 601000, reward: 17.80, epsilon: 0.010000, episode:  316
+frames: 602000, reward: 17.80, epsilon: 0.010000, episode:  316
+frames: 603000, reward: 17.80, epsilon: 0.010000, episode:  317
+frames: 604000, reward: 17.80, epsilon: 0.010000, episode:  317
+frames: 605000, reward: 17.20, epsilon: 0.010000, episode:  318
+frames: 606000, reward: 17.20, epsilon: 0.010000, episode:  318
+frames: 607000, reward: 17.40, epsilon: 0.010000, episode:  319
+frames: 608000, reward: 18.20, epsilon: 0.010000, episode:  320
+frames: 609000, reward: 18.20, epsilon: 0.010000, episode:  320
+frames: 610000, reward: 18.20, epsilon: 0.010000, episode:  321
+frames: 611000, reward: 18.20, epsilon: 0.010000, episode:  321
+frames: 612000, reward: 18.30, epsilon: 0.010000, episode:  322
+frames: 613000, reward: 18.30, epsilon: 0.010000, episode:  322
+frames: 614000, reward: 18.50, epsilon: 0.010000, episode:  323
+frames: 615000, reward: 18.50, epsilon: 0.010000, episode:  324
+frames: 616000, reward: 18.50, epsilon: 0.010000, episode:  324
+frames: 617000, reward: 19.00, epsilon: 0.010000, episode:  325
+frames: 618000, reward: 19.00, epsilon: 0.010000, episode:  325
+frames: 619000, reward: 19.20, epsilon: 0.010000, episode:  326
+frames: 620000, reward: 19.20, epsilon: 0.010000, episode:  326
+frames: 621000, reward: 19.10, epsilon: 0.010000, episode:  327
+frames: 622000, reward: 19.70, epsilon: 0.010000, episode:  328
+frames: 623000, reward: 19.70, epsilon: 0.010000, episode:  328
+frames: 624000, reward: 19.10, epsilon: 0.010000, episode:  329
+frames: 625000, reward: 19.10, epsilon: 0.010000, episode:  329
+frames: 626000, reward: 19.10, epsilon: 0.010000, episode:  330
+frames: 627000, reward: 19.10, epsilon: 0.010000, episode:  330
+frames: 628000, reward: 19.10, epsilon: 0.010000, episode:  331
+frames: 629000, reward: 19.10, epsilon: 0.010000, episode:  331
+frames: 630000, reward: 19.10, epsilon: 0.010000, episode:  332
+frames: 631000, reward: 19.10, epsilon: 0.010000, episode:  332
+frames: 632000, reward: 18.80, epsilon: 0.010000, episode:  333
+frames: 633000, reward: 18.60, epsilon: 0.010000, episode:  334
+frames: 634000, reward: 18.60, epsilon: 0.010000, episode:  334
+frames: 635000, reward: 18.50, epsilon: 0.010000, episode:  335
+frames: 636000, reward: 18.50, epsilon: 0.010000, episode:  335
+frames: 637000, reward: 17.90, epsilon: 0.010000, episode:  336
+frames: 638000, reward: 17.90, epsilon: 0.010000, episode:  336
+frames: 639000, reward: 18.00, epsilon: 0.010000, episode:  337
+frames: 640000, reward: 18.00, epsilon: 0.010000, episode:  337
+frames: 641000, reward: 18.00, epsilon: 0.010000, episode:  337
+frames: 642000, reward: 15.90, epsilon: 0.010000, episode:  338
+frames: 643000, reward: 15.90, epsilon: 0.010000, episode:  338
+frames: 644000, reward: 16.10, epsilon: 0.010000, episode:  339
+frames: 645000, reward: 16.10, epsilon: 0.010000, episode:  339
+frames: 646000, reward: 15.80, epsilon: 0.010000, episode:  340
+frames: 647000, reward: 15.90, epsilon: 0.010000, episode:  341
+frames: 648000, reward: 15.90, epsilon: 0.010000, episode:  341
+frames: 649000, reward: 15.70, epsilon: 0.010000, episode:  342
+frames: 650000, reward: 15.70, epsilon: 0.010000, episode:  342
+frames: 651000, reward: 15.80, epsilon: 0.010000, episode:  343
+frames: 652000, reward: 15.80, epsilon: 0.010000, episode:  343
+frames: 653000, reward: 15.90, epsilon: 0.010000, episode:  344
+frames: 654000, reward: 15.90, epsilon: 0.010000, episode:  344
+frames: 655000, reward: 15.80, epsilon: 0.010000, episode:  345
+frames: 656000, reward: 16.40, epsilon: 0.010000, episode:  346
+frames: 657000, reward: 16.40, epsilon: 0.010000, episode:  346
+frames: 658000, reward: 16.20, epsilon: 0.010000, episode:  347
+frames: 659000, reward: 16.20, epsilon: 0.010000, episode:  347
+frames: 660000, reward: 18.30, epsilon: 0.010000, episode:  348
+frames: 661000, reward: 18.30, epsilon: 0.010000, episode:  348
+frames: 662000, reward: 18.70, epsilon: 0.010000, episode:  349
+frames: 663000, reward: 18.70, epsilon: 0.010000, episode:  349
+frames: 664000, reward: 19.10, epsilon: 0.010000, episode:  350
+frames: 665000, reward: 19.10, epsilon: 0.010000, episode:  350
+frames: 666000, reward: 18.70, epsilon: 0.010000, episode:  351
+frames: 667000, reward: 18.70, epsilon: 0.010000, episode:  351
+frames: 668000, reward: 18.70, epsilon: 0.010000, episode:  352
+frames: 669000, reward: 18.70, epsilon: 0.010000, episode:  353
+frames: 670000, reward: 18.70, epsilon: 0.010000, episode:  353
+frames: 671000, reward: 18.80, epsilon: 0.010000, episode:  354
+frames: 672000, reward: 18.80, epsilon: 0.010000, episode:  354
+frames: 673000, reward: 18.90, epsilon: 0.010000, episode:  355
+frames: 674000, reward: 18.90, epsilon: 0.010000, episode:  355
+frames: 675000, reward: 18.60, epsilon: 0.010000, episode:  356
+frames: 676000, reward: 18.60, epsilon: 0.010000, episode:  356
+frames: 677000, reward: 18.10, epsilon: 0.010000, episode:  357
+frames: 678000, reward: 18.10, epsilon: 0.010000, episode:  357
+frames: 679000, reward: 17.90, epsilon: 0.010000, episode:  358
+frames: 680000, reward: 17.90, epsilon: 0.010000, episode:  358
+frames: 681000, reward: 17.70, epsilon: 0.010000, episode:  359
+frames: 682000, reward: 17.70, epsilon: 0.010000, episode:  359
+frames: 683000, reward: 16.80, epsilon: 0.010000, episode:  360
+frames: 684000, reward: 16.80, epsilon: 0.010000, episode:  360
+frames: 685000, reward: 17.00, epsilon: 0.010000, episode:  361
+frames: 686000, reward: 17.00, epsilon: 0.010000, episode:  361
+frames: 687000, reward: 17.00, epsilon: 0.010000, episode:  362
+frames: 688000, reward: 17.00, epsilon: 0.010000, episode:  362
+frames: 689000, reward: 16.90, epsilon: 0.010000, episode:  363
+frames: 690000, reward: 16.90, epsilon: 0.010000, episode:  363
+frames: 691000, reward: 16.70, epsilon: 0.010000, episode:  364
+frames: 692000, reward: 16.70, epsilon: 0.010000, episode:  364
+frames: 693000, reward: 16.40, epsilon: 0.010000, episode:  365
+frames: 694000, reward: 16.40, epsilon: 0.010000, episode:  365
+frames: 695000, reward: 16.60, epsilon: 0.010000, episode:  366
+frames: 696000, reward: 16.60, epsilon: 0.010000, episode:  366
+frames: 697000, reward: 17.30, epsilon: 0.010000, episode:  367
+frames: 698000, reward: 17.30, epsilon: 0.010000, episode:  367
+frames: 699000, reward: 16.60, epsilon: 0.010000, episode:  368
+frames: 700000, reward: 16.60, epsilon: 0.010000, episode:  369
+frames: 701000, reward: 16.60, epsilon: 0.010000, episode:  369
+frames: 702000, reward: 17.10, epsilon: 0.010000, episode:  370
+frames: 703000, reward: 17.10, epsilon: 0.010000, episode:  370
+frames: 704000, reward: 17.30, epsilon: 0.010000, episode:  371
+frames: 705000, reward: 17.30, epsilon: 0.010000, episode:  371
+frames: 706000, reward: 17.30, epsilon: 0.010000, episode:  372
+frames: 707000, reward: 17.30, epsilon: 0.010000, episode:  372
+frames: 708000, reward: 17.40, epsilon: 0.010000, episode:  373
+frames: 709000, reward: 17.40, epsilon: 0.010000, episode:  373
+frames: 710000, reward: 17.40, epsilon: 0.010000, episode:  374
+frames: 711000, reward: 17.40, epsilon: 0.010000, episode:  374
+frames: 712000, reward: 17.60, epsilon: 0.010000, episode:  375
+frames: 713000, reward: 17.70, epsilon: 0.010000, episode:  376
+frames: 714000, reward: 17.70, epsilon: 0.010000, episode:  376
+frames: 715000, reward: 17.60, epsilon: 0.010000, episode:  377
+frames: 716000, reward: 17.60, epsilon: 0.010000, episode:  377
+frames: 717000, reward: 18.40, epsilon: 0.010000, episode:  378
+frames: 718000, reward: 18.40, epsilon: 0.010000, episode:  378
+frames: 719000, reward: 18.60, epsilon: 0.010000, episode:  379
+frames: 720000, reward: 18.60, epsilon: 0.010000, episode:  379
+frames: 721000, reward: 18.80, epsilon: 0.010000, episode:  380
+frames: 722000, reward: 18.80, epsilon: 0.010000, episode:  380
+frames: 723000, reward: 18.60, epsilon: 0.010000, episode:  381
+frames: 724000, reward: 18.80, epsilon: 0.010000, episode:  382
+frames: 725000, reward: 18.80, epsilon: 0.010000, episode:  382
+frames: 726000, reward: 18.50, epsilon: 0.010000, episode:  383
+frames: 727000, reward: 18.50, epsilon: 0.010000, episode:  383
+frames: 728000, reward: 18.50, epsilon: 0.010000, episode:  383
+frames: 729000, reward: 18.10, epsilon: 0.010000, episode:  384
+frames: 730000, reward: 18.30, epsilon: 0.010000, episode:  385
+frames: 731000, reward: 18.30, epsilon: 0.010000, episode:  385
+frames: 732000, reward: 18.40, epsilon: 0.010000, episode:  386
+frames: 733000, reward: 18.40, epsilon: 0.010000, episode:  386
+frames: 734000, reward: 18.50, epsilon: 0.010000, episode:  387
+frames: 735000, reward: 18.50, epsilon: 0.010000, episode:  387
+frames: 736000, reward: 18.60, epsilon: 0.010000, episode:  388
+frames: 737000, reward: 18.50, epsilon: 0.010000, episode:  389
+frames: 738000, reward: 18.50, epsilon: 0.010000, episode:  389
+frames: 739000, reward: 18.60, epsilon: 0.010000, episode:  390
+frames: 740000, reward: 18.60, epsilon: 0.010000, episode:  390
+frames: 741000, reward: 18.70, epsilon: 0.010000, episode:  391
+frames: 742000, reward: 18.70, epsilon: 0.010000, episode:  391
+frames: 743000, reward: 18.70, epsilon: 0.010000, episode:  391
+frames: 744000, reward: 16.60, epsilon: 0.010000, episode:  392
+frames: 745000, reward: 16.90, epsilon: 0.010000, episode:  393
+frames: 746000, reward: 16.90, epsilon: 0.010000, episode:  393
+frames: 747000, reward: 17.40, epsilon: 0.010000, episode:  394
+frames: 748000, reward: 17.40, epsilon: 0.010000, episode:  394
+frames: 749000, reward: 17.40, epsilon: 0.010000, episode:  395
+frames: 750000, reward: 17.40, epsilon: 0.010000, episode:  395
+frames: 751000, reward: 17.30, epsilon: 0.010000, episode:  396
+frames: 752000, reward: 17.30, epsilon: 0.010000, episode:  396
+frames: 753000, reward: 17.30, epsilon: 0.010000, episode:  397
+frames: 754000, reward: 17.30, epsilon: 0.010000, episode:  398
+frames: 755000, reward: 17.30, epsilon: 0.010000, episode:  398
+frames: 756000, reward: 17.00, epsilon: 0.010000, episode:  399
+frames: 757000, reward: 17.00, epsilon: 0.010000, episode:  399
+frames: 758000, reward: 17.10, epsilon: 0.010000, episode:  400
+frames: 759000, reward: 17.10, epsilon: 0.010000, episode:  400
+frames: 760000, reward: 17.10, epsilon: 0.010000, episode:  401
+frames: 761000, reward: 17.10, epsilon: 0.010000, episode:  401
+frames: 762000, reward: 19.10, epsilon: 0.010000, episode:  402
+frames: 763000, reward: 19.10, epsilon: 0.010000, episode:  402
+frames: 764000, reward: 19.10, epsilon: 0.010000, episode:  403
+frames: 765000, reward: 19.30, epsilon: 0.010000, episode:  404
+frames: 766000, reward: 19.30, epsilon: 0.010000, episode:  404
+frames: 767000, reward: 18.90, epsilon: 0.010000, episode:  405
+frames: 768000, reward: 18.90, epsilon: 0.010000, episode:  405
+frames: 769000, reward: 19.10, epsilon: 0.010000, episode:  406
+frames: 770000, reward: 19.10, epsilon: 0.010000, episode:  406
+frames: 771000, reward: 19.20, epsilon: 0.010000, episode:  407
+frames: 772000, reward: 19.20, epsilon: 0.010000, episode:  407
+frames: 773000, reward: 18.20, epsilon: 0.010000, episode:  408
+frames: 774000, reward: 18.20, epsilon: 0.010000, episode:  408
+frames: 775000, reward: 18.70, epsilon: 0.010000, episode:  409
+frames: 776000, reward: 18.50, epsilon: 0.010000, episode:  410
+frames: 777000, reward: 18.50, epsilon: 0.010000, episode:  410
+frames: 778000, reward: 18.70, epsilon: 0.010000, episode:  411
+frames: 779000, reward: 18.70, epsilon: 0.010000, episode:  411
+frames: 780000, reward: 18.60, epsilon: 0.010000, episode:  412
+frames: 781000, reward: 18.60, epsilon: 0.010000, episode:  412
+frames: 782000, reward: 18.70, epsilon: 0.010000, episode:  413
+frames: 783000, reward: 18.40, epsilon: 0.010000, episode:  414
+frames: 784000, reward: 18.40, epsilon: 0.010000, episode:  414
+frames: 785000, reward: 18.80, epsilon: 0.010000, episode:  415
+frames: 786000, reward: 18.80, epsilon: 0.010000, episode:  415
+frames: 787000, reward: 18.60, epsilon: 0.010000, episode:  416
+frames: 788000, reward: 18.60, epsilon: 0.010000, episode:  416
+frames: 789000, reward: 18.50, epsilon: 0.010000, episode:  417
+frames: 790000, reward: 19.50, epsilon: 0.010000, episode:  418
+frames: 791000, reward: 19.50, epsilon: 0.010000, episode:  418
+frames: 792000, reward: 19.50, epsilon: 0.010000, episode:  419
+frames: 793000, reward: 19.50, epsilon: 0.010000, episode:  419
+frames: 794000, reward: 19.80, epsilon: 0.010000, episode:  420
+frames: 795000, reward: 19.80, epsilon: 0.010000, episode:  420
+frames: 796000, reward: 19.30, epsilon: 0.010000, episode:  421
